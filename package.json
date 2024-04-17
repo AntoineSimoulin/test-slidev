@@ -3,14 +3,16 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build": "slidev build ./slides.md --base /test-slidev/presentation1/ --out ./dist/presentation1/",
     "dev": "slidev --open",
-    "export": "slidev export"
+    "export": "slidev export",
+    "deploy": "gh-pages -d dist --dotfiles --nojekyll"
   },
   "dependencies": {
     "@slidev/cli": "^0.49.0-beta.3",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
+    "gh-pages": "^6.1.1",
     "vue": "^3.4.21"
   }
 }
